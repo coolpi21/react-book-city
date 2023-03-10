@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '@/pages/home/components/header';
 import styles from './index.module.scss';
 
+import { ErrorBlock } from '@/bases';
 import Loading from '@/components/Loading';
 
 import { useRequest } from '@/hooks/useRequest';
@@ -12,7 +13,7 @@ const Home: React.FC = () => {
   const { data, error } = useRequest({ url: api.getHomeData });
 
   if (error) {
-    return <>error block</>;
+    return <ErrorBlock />;
   }
 
   if (!data) {
