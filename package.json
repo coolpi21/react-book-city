@@ -9,10 +9,12 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "axios": "0.27.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.2",
-    "sass": "^1.58.3"
+    "sass": "^1.58.3",
+    "swr": "1.3.0"
   },
   "devDependencies": {
     "@taoyage/configs": "^1.3.5",
