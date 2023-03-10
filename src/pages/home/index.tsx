@@ -3,8 +3,10 @@ import React from 'react';
 import Header from '@/pages/home/components/header';
 import styles from './index.module.scss';
 
+import Loading from '@/components/Loading';
+
 import { useRequest } from '@/hooks/useRequest';
-import api from '@/pages/home/api/index';
+import api from '@/pages/home/api';
 
 const Home: React.FC = () => {
   const { data, error } = useRequest({ url: api.getHomeData });
@@ -14,7 +16,7 @@ const Home: React.FC = () => {
   }
 
   if (!data) {
-    return <>Loading</>;
+    return <Loading />;
   }
 
   console.log(data);
