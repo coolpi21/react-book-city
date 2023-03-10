@@ -11,7 +11,7 @@ export interface ErrorBlockProps {
 
 const classPrefix = 'ygm-error-block';
 
-const ErrorBlock: React.FC<ErrorBlockProps> = React.memo((props) => {
+const ErrorBlock: React.FC<ErrorBlockProps> = (props) => {
   let imageNode: React.ReactNode = ErrorImage;
 
   if (props.errorImage) {
@@ -26,7 +26,7 @@ const ErrorBlock: React.FC<ErrorBlockProps> = React.memo((props) => {
       </div>
     </div>
   );
-});
+};
 
 ErrorBlock.defaultProps = {
   title: '页面遇到一些小问题',
